@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Job Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="glass-nav">
+        <div class="logo">Stud work</div>
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#jobs">Найти работу</a>
+            <a href="#post-resume">Отправить резюме</a>
+            <a href="#about">О нас</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero fade-in">
+            <div class="hero-content">
+                <h1>Найди работу или найми сотрудников быстро и легко</h1>
+                <p>Платформа соединяющая таланты с компаниями.</p>
+                <div class="cta-buttons">
+                    <a href="#jobs" class="btn btn-primary">Найти работу</a>
+                    <a href="#post-vacancy" class="btn btn-secondary">Разместить вакансию</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Job Listings -->
+        <section id="jobs" class="section fade-in">
+            <h2>Последние вакансии</h2>
+            <div class="filters">
+                <input type="text" id="search-position" placeholder="Search by position...">
+                <label for="filter-location" class="visually-hidden">Фильтр по локации</label>
+                <select id="filter-location">
+                    <option value="">Все локации</option>
+                    <option value="Сатпаев">Сатпаев</option>
+                    <option value="Жезказган">Жезказган</option>
+                    <option value="Кенгир">Кенгир</option>
+                    <option value="Удаленно">УДАЛЕННО</option>
+                </select>
+            </div>
+
+            <div class="job-grid" id="job-grid">
+                <!-- Job Cards will be populated by JS -->
+            </div>
+        </section>
+
+        <!-- Resume Form Section -->
+        <section id="post-resume" class="section fade-in">
+            <h2>Отправить резюме</h2>
+            <form id="resume-form" class="glass-card form-container">
+                <div id="form-notification" class="hidden"></div>
+
+                <div class="form-group">
+                    <label for="fullName">Полное имя</label>
+                    <input type="text" id="fullName" required placeholder="John Doe">
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="age">Возраст</label>
+                        <input type="number" id="age" required min="16" max="100" placeholder="25">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Номер телефона</label>
+                        <input type="tel" id="phone" required placeholder="+1 234 567 8900">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="telegram">Телеграм</label>
+                    <div class="input-with-prefix">
+                        <span class="prefix">@</span>
+                        <input type="text" id="telegram" required placeholder="username">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="position">Желаемая должность</label>
+                    <input type="text" id="position" required placeholder="Frontend Developer">
+                </div>
+
+                <div class="form-group">
+                    <label for="skills">Умения</label>
+                    <input type="text" id="skills" required placeholder="HTML, CSS, JavaScript, React">
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Опыт работы</label>
+                    <textarea id="experience" required rows="3"
+                        placeholder="Describe your relevant experience..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="about">О себе</label>
+                    <textarea id="about" required rows="3" placeholder="Tell us about yourself..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary full-width" id="submit-btn">
+                    <span class="btn-text">Отправить резюме</span>
+                    <span class="loader hidden"></span>
+                </button>
+            </form>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section fade-in">
+            <h2>Насчет платформы</h2>
+            <div class="glass-card about-content">
+                <p>Добро пожаловать на сайт Stud work.</p>
+                <p>Наш сайт помогает найти работу или сотрудников.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>Email: zhanibekbiba16@gmail.com</p>
+                <p>Phone: +7 707 848 7050</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <p>Telegram | Instagram | TikTok</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Stud Work. Все права защищены (возможно).</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
