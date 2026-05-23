@@ -30,7 +30,6 @@
     </header>
 
     <main>
-        <!-- Home Section -->
         <section id="home" class="hero fade-in">
             <div class="hero-content">
                 <h1>Найди работу или найми сотрудников быстро и легко</h1>
@@ -42,7 +41,45 @@
             </div>
         </section>
 
-        <!-- Job Listings -->
+
+         <div id="vacancy-modal" class="modal hidden">
+            <div class="glass-card modal-content">
+                <span class="close-modal">×</span>
+                <h2>Разместить вакансию</h2>
+                <form id="vacancy-form">
+                    <div class="form-group">
+                        <label for="company-name">Название компании / Работодатель</label>
+                        <input type="text" id="company-name" required placeholder="Например: ТОО Акцент">
+                    </div>
+                    <div class="form-group">
+                        <label for="job-title-input">Должность</label>
+                        <input type="text" id="job-title-input" required placeholder="Например: Бариста, Программист">
+                    </div>
+                    <div class="form-group">
+                        <label for="job-salary">Заработная плата (₸)</label>
+                        <input type="text" id="job-salary" required placeholder="Например: 150,000 - 200,000">
+                    </div>
+                    <div class="form-group">
+                        <label for="job-city">Город</label>
+                        <input type="text" id="job-city" required placeholder="Например: Сатпаев">
+                    </div>
+                    <div class="form-group">
+                        <label for="job-contacts">Контакты для связи (Телефон / Telegram)</label>
+                        <input type="text" id="job-contacts" required placeholder="@username или +7...">
+                    </div>
+                    <div class="form-group">
+                        <label for="job-description">Описание обязанностей и требований</label>
+                        <textarea id="job-description" required rows="4" placeholder="Опишите, кого вы ищете..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width" id="vacancy-submit-btn">
+                        <span class="btn-text">Опубликовать вакансию</span>
+                        <span class="loader hidden"></span>
+                    </button>
+                </form>
+                <div id="modal-notification" class="hidden"></div>
+            </div>
+        </div>
+
         <section id="jobs" class="section fade-in">
             <h2>Последние вакансии</h2>
             <div class="filters">
@@ -58,11 +95,9 @@
             </div>
 
             <div class="job-grid" id="job-grid">
-                <!-- Job Cards will be populated by JS -->
-            </div>
+                </div>
         </section>
 
-        <!-- Resume Form Section -->
         <section id="post-resume" class="section fade-in">
             <h2>Отправить резюме</h2>
             <form id="resume-form" class="glass-card form-container">
@@ -121,8 +156,7 @@
             </form>
         </section>
 
-        <!-- Resume Form Section -->
- <section id="about" class="section fade-in">
+        <section id="about" class="section fade-in">
             <h2>О нас и наши контакты</h2>
             <div class="glass-card about-content">
                 <p>Добро пожаловать на сайт Stud work.</p>
@@ -146,9 +180,7 @@
             </div>
         </section>
 
-
-        <!-- About Section -->
-        <section id="about" class="section fade-in">
+        <section id="about-platform" class="section fade-in">
             <h2>Насчет платформы</h2>
             <div class="glass-card about-content">
                 <p>Добро пожаловать на сайт Stud work.</p>
@@ -170,17 +202,13 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Stud Work. Все права защищены (возможно).</p>
+            <p>© 2026 Stud Work. Все права защищены (возможно).</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
-
-</body>
-
+    <script src="script2.js"></script>
     <script src="https://agents.dante-ai.com/embed.js" data-agent-id="eef0b906-0b6d-471d-843c-30289363029f" data-widget-key="wk_0Ho0spPApmmSwi41pMMwWUeScNu3RzgZ" crossorigin="anonymous" async></script>
-    
-</body>
-</html>
 
+</body>
 </html>
